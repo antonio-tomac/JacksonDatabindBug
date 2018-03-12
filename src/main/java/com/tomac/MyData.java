@@ -26,15 +26,6 @@ public class MyData<D, SD> {
 		private final D key;
 		private final List<MyEntry<SD>> entries;
 
-		public static class LongGroup<SD> extends MyGroup<Long, SD> {
-
-			@ConstructorProperties({"key","entries"})
-			public LongGroup(Long key, List<MyEntry<SD>> entries) {
-				super(key, entries);
-			}
-
-		}
-
 		public static class StringGroup<SD> extends MyGroup<String, SD> {
 
 			@ConstructorProperties({"key", "entries"})
@@ -53,19 +44,10 @@ public class MyData<D, SD> {
 
 		private final D key;
 
-		public static class LongEntry extends MyEntry<Long> {
+		public static class IntEntry extends MyEntry<Integer> {
 
 			@ConstructorProperties({"key"})
-			public LongEntry(Long key) {
-				super(key);
-			}
-
-		}
-
-		public static class StringEntry extends MyEntry<String> {
-
-			@ConstructorProperties({"key"})
-			public StringEntry(String key) {
+			public IntEntry(Integer key) {
 				super(key);
 			}
 
