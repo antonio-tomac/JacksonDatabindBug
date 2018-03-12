@@ -28,7 +28,7 @@ public class MyDataTest {
 
 		//deserialize back
 		JavaType type = mapper.getTypeFactory().constructParametricType(
-			MyData.class, String.class, String.class
+			MyData.class, String.class, Integer.class
 		);
 		MyData<String, String> data2dCopy = mapper.readValue(json, type);
 
