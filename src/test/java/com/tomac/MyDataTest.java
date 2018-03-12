@@ -6,7 +6,7 @@ import com.tomac.MyData.MyEntry.IntEntry;
 import com.tomac.MyData.MyGroup.StringGroup;
 import java.util.Arrays;
 import lombok.SneakyThrows;
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class MyDataTest {
@@ -33,7 +33,7 @@ public class MyDataTest {
 		MyData<String, String> data2dCopy = mapper.readValue(json, type);
 
 		//check to be equal
-		assertThat(data2dCopy).isEqualTo(data2d);
+		assertEquals(data2d, data2dCopy);
 	}
 
 }
